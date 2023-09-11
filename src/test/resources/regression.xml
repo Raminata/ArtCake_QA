@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Regression" verbose="1" >
+
+    <test name="Regression" >
+        <classes>
+
+            <class name="com.ArtCake.restAssuredTests.RALoginTests" />
+            <class name="com.ArtCake.restAssuredTests.RALogoutTests" />
+            <class name="com.ArtCake.restAssuredTests.RAUpdateUserTests" />
+            <class name="com.ArtCake.restAssuredTests.RAGetAllUsersByRoleTests" />
+            <class name="com.ArtCake.restAssuredTests.RAGettingProfileTests" />
+            <class name="com.ArtCake.restAssuredTests.RAGetManagerOrdersTests" />
+            <class name="com.ArtCake.restAssuredTests.RAGetConfectionerOrdersTests" />
+            <class name="com.ArtCake.restAssuredTests.RAGetClientOrdersTests" />
+            <class name="com.ArtCake.restAssuredTests.RAMoveOrderToProcessTests" />
+            <class name="com.ArtCake.restAssuredTests.RAMoveOrderToDeclineTests" />
+            <class name="com.ArtCake.restAssuredTests.RAOrderTests" />
+            <class name="com.ArtCake.restAssuredTests.RAGetCakeTests" />
+            <class name="com.ArtCake.restAssuredTests.RAUpdateCakeTests" />
+            <class name="com.ArtCake.restAssuredTests.RAGetAllCakesTests" />
+            <class name="com.ArtCake.restAssuredTests.RACakeAddToAssortmentTests" />
+            <class name="com.ArtCake.restAssuredTests.RACakesGetByCategoryTests" />
+            <class name="com.ArtCake.restAssuredTests.RARegistrationTests" />
+
+        </classes>
+    </test>
+
+</suite>

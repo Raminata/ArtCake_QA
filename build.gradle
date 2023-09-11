@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+    id 'io.freefair.lombok' version '5.3.0'
+}
+
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.testng:testng:7.8.0'
+    implementation 'io.rest-assured:rest-assured:5.3.1'
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'ch.qos.logback:logback-classic:1.4.11'
+
+    annotationProcessor 'org.projectlombok:lombok:1.18.28'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.28'
+}
+
+
+test {
+    useTestNG()
+}
+
+task qa1(type:Test) {
+    useTestNG() {
+        def suite1 = project.hasProperty("suite1")
+        def suite2 = project.hasProperty("suite2")
+        if (suite1) {
+            suites 'src/test/resources/quick.xml'
+        } else if(suite2){
+            suites 'src/test/resources/regression.xml'
+        }
+    }
+    if(project.hasProperty('browser')){
+        systemProperty 'browser', "${browser}"
+    }
+}
